@@ -9,6 +9,7 @@ import { toast } from 'react-toastify';
 import { useRouter } from "next/navigation";
 import CircularIndeterminate from "@/components/common/circular-inditerminate";
 import { useLoginMutation } from "@/redux/features/authApiSlice";
+import Logo from "@/components/common/logo";
 
 const Login:NextPage=()=>{
   const router = useRouter();
@@ -25,20 +26,20 @@ const Login:NextPage=()=>{
       password: Yup.string().min(7).max(255).required('Password is required'),
     }),
     onSubmit: async(values,helpers):Promise<void>=>{
-      try{
-        await login(values)
-        .unwrap()
-        .then(()=>{
-          toast.success('Logged in successfully')
-          router.push('/dashboard')
-        })
-        .catch(()=>{
-          toast.error('Failed to login')
-        })
-      }
-      catch(error){
-        console.error(error)
-      }
+    //   try{
+    //     await login(values)
+    //     .unwrap()
+    //     .then(()=>{
+    //       toast.success('Logged in successfully')
+    //       router.push('/dashboard')
+    //     })
+    //     .catch(()=>{
+    //       toast.error('Failed to login')
+    //     })
+    //   }
+    //   catch(error){
+    //     console.error(error)
+    //   }
     }
   })
   return (
@@ -73,21 +74,13 @@ const Login:NextPage=()=>{
                 justifyContent: 'center'
               }}
             >
-              <Typography variant="h4">
-                Register
-              </Typography>
-              <Typography 
-              color="textSecondary"
-              sx={{ mt:2 }}
-              variant="body2"
-              >
-                my promo goes here
-              </Typography>
+              {/* */}
+              <Logo />
             </Box>
             <Box
               sx={{
                 flexgrow:1,
-                mt:3
+                
               }}
             >
                {formik.errors.submit && (

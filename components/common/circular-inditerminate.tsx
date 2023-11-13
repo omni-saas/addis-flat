@@ -15,6 +15,6 @@ export default function CircularIndeterminate() {
   // });
   return (
    
-      <CircularProgress sx={{ width:4, height: 4 }}/>
+      <CircularProgress sx={{ width:2, height: 2 }}/>
   );
 }
