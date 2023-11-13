@@ -5,7 +5,7 @@ import Image from 'next/image'
 const Logo:FC = () =>{
   return(
     <>
-      <Image src="/static/logo.svg" height={80} width={150} alt="logo"/>
+      <Image src="/static/logo.svg" priority={true} height={20} width={150} alt="logo"/>
     </>
   );
 }
