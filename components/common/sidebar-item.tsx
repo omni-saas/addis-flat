@@ -22,8 +22,7 @@ interface DashboardSidebarItemProps extends ListItemProps {
   title: string;
 };
 
-export const DashboardSidebarItem: FC<DashboardSidebarItemProps> = (props) => {
-  const {
+export default function DashboardSidebarItem ({
     active,
     children,
     chip,
@@ -34,7 +33,8 @@ export const DashboardSidebarItem: FC<DashboardSidebarItemProps> = (props) => {
     path,
     title,
     ...other
-  } = props;
+}:DashboardSidebarItemProps) {
+  
   const [open, setOpen] = useState<boolean>(openProp);
   const handleToggle = (): void => {
     setOpen((prevOpen) => !prevOpen);
@@ -121,7 +121,7 @@ export const DashboardSidebarItem: FC<DashboardSidebarItemProps> = (props) => {
           sx={{
             backgroundColor: active && 'rgba(255,255,255,0.08)',
             borderRadius: 1,
-            color: active ? 'primary' : 'neutral.500',
+            color: active ? 'primary.main' : 'neutral.500',
             fontWeight: active && 'fontWeightBold',
             justifyContent: 'flex-start',
             pl: `${paddingLeft}px`,
@@ -129,11 +129,11 @@ export const DashboardSidebarItem: FC<DashboardSidebarItemProps> = (props) => {
             textAlign: 'left',
             width: '100%',
             '& .MuiButton-startIcon': {
-              color: active ? 'secondary.main' : 'neutral.900'
+              color: active ? 'secondary.main' : '#cfcfcf'
             },
           }}
         >
-          <Box sx={{ flexGrow: 1, textTransform:'uppercase', fontSize:11, color:'#fff' }}>
+          <Box sx={{ flexGrow: 1, textTransform:'uppercase', fontSize:12, color:'#ffffff' }}>
             {title}
           </Box>
           {info}

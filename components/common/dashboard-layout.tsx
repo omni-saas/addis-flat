@@ -1,12 +1,11 @@
 'use client'
-import { FC, ReactNode, useState } from "react";
+import { ReactNode, useState } from "react";
 import PropTypes from "prop-types";
-import { Box, styled } from "@mui/material";
+import { styled } from "@mui/material";
 import { Sidebar } from "./sidebar";
+import { DashboardNavbar } from "./dashboard-navbar";
 
-interface Props{
-  children?:ReactNode;
-}
+
 
 const DashboardLayoutRoot = styled('div')(
   ({ theme }) => ({
@@ -21,7 +20,7 @@ const DashboardLayoutRoot = styled('div')(
 )
 
 
-export const DashboardLayout:FC<Props> = (props) =>{
+export default function DashboardLayout(props:{ children: ReactNode }){
   const { children } = props;
   const [isSidebarOpen,setIsSidebarOpen] = useState<boolean>(false);
   return(
@@ -29,6 +28,7 @@ export const DashboardLayout:FC<Props> = (props) =>{
       <DashboardLayoutRoot>
           {children}
       </DashboardLayoutRoot>
+      <DashboardNavbar onOpenSidebar={(): void => setIsSidebarOpen(true)} />
       <Sidebar 
         onClose={(): void =>setIsSidebarOpen(false)}
         open={isSidebarOpen}

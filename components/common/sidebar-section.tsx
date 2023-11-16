@@ -2,7 +2,7 @@ import type { FC, ReactNode } from 'react';
 import PropTypes from 'prop-types';
 import { List, ListSubheader } from '@mui/material';
 import type { ListProps } from '@mui/material';
-import { DashboardSidebarItem } from './sidebar-item';
+import DashboardSidebarItem from './sidebar-item';
 
 
 interface Item {
