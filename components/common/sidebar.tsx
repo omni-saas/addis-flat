@@ -10,6 +10,19 @@ import Logo from "./logo";
 import Link from "next/link";
 import { SidebarSection } from "./sidebar-section";
 import DashboardIcon from '@mui/icons-material/Dashboard';
+import TaskIcon from '@mui/icons-material/Task';
+import HomeIcon from '@mui/icons-material/Home';
+import HomeWorkIcon from '@mui/icons-material/HomeWork';
+import BuildIcon from '@mui/icons-material/Build';
+import SummarizeIcon from '@mui/icons-material/Summarize';
+import HelpIcon from '@mui/icons-material/Help';
+import Face6Icon from '@mui/icons-material/Face6';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import CallToActionIcon from '@mui/icons-material/CallToAction';
+import ChecklistRtlIcon from '@mui/icons-material/ChecklistRtl';
+
+
+
 interface Props{
   onClose: () => void;
   open: boolean;
@@ -32,53 +45,53 @@ const getSections = (): Section[] => [
     items:[
       {
         title: 'Dashboard',
-        path:'/',
+        path:'/dashboard',
         icon: <DashboardIcon />
       },
       {
         title: 'Tasks',
-        path:'/',
-        icon:''
+        path:'/tasks',
+        icon:<TaskIcon />
       },
       {
         title: 'Properties',
-        path:'/',
-        icon:''
+        path:'/properties',
+        icon:<HomeIcon />
       },
       {
         title: 'Services',
-        path:'/',
-        icon:''
+        path:'/services',
+        icon: <HomeWorkIcon /> 
       },
       {
         title: 'Marketing',
-        path:'/',
-        icon:''
+        path:'/marketing',
+        icon:<CallToActionIcon />
       },
       {
         title: 'Prospective Tenants',
-        path:'/',
-        icon:''
+        path:'/prospective-tenants',
+        icon:<ChecklistRtlIcon />
       },
       {
         title: 'Tenants & Leases',
-        path:'/',
-        icon:''
+        path:'/tenants-and-leases',
+        icon:<Face6Icon />
       },
       {
         title: 'Financials',
-        path:'/',
-        icon:''
+        path:'/financial',
+        icon:<AttachMoneyIcon />
       },
       {
         title: 'Maintainance & Repair',
-        path:'/',
-        icon:''
+        path:'/maintainance-and-repair',
+        icon: <BuildIcon />
       },
       {
         title: 'Reports',
-        path:'/',
-        icon:''
+        path:'/reports',
+        icon: <SummarizeIcon />
       },
     ],
     
@@ -88,8 +101,8 @@ const getSections = (): Section[] => [
     items:[
       {
         title: 'customer Support',
-        path:'/',
-        icon:''
+        path:'/customer-support',
+        icon:<HelpIcon />
       },
     ]
   }
