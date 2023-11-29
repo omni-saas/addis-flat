@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 import type { FC } from 'react';
 import PropTypes from 'prop-types';
+import DashboardIcon from '@mui/icons-material/Dashboard';
 import {
   AppBar,
   Avatar,
@@ -124,6 +125,9 @@ export const DashboardNavbar: FC<DashboardNavbarProps> = (props) => {
             }}
           >
             <MenuIcon fontSize="medium" />
+          </IconButton>
+          <IconButton>
+            <DashboardIcon fontSize='medium'/>
           </IconButton>
           <Typography sx={{
             textTransform:'uppercase',
