@@ -50,47 +50,47 @@ const getSections = (): Section[] => [
       },
       {
         title: 'Tasks',
-        path:'/tasks',
+        path:'/dashboard/tasks',
         icon:<TaskIcon />
       },
       {
         title: 'Properties',
-        path:'/properties',
+        path:'/dashboard/properties',
         icon:<HomeIcon />
       },
       {
         title: 'Services',
-        path:'/services',
+        path:'/dashboard/services',
         icon: <HomeWorkIcon /> 
       },
       {
         title: 'Marketing',
-        path:'/marketing',
+        path:'/dashboard/marketing',
         icon:<CallToActionIcon />
       },
       {
         title: 'Prospective Tenants',
-        path:'/prospective-tenants',
+        path:'/dashboard/tenants',
         icon:<ChecklistRtlIcon />
       },
       {
         title: 'Tenants & Leases',
-        path:'/tenants-and-leases',
+        path:'/dashboard/tenants-lease',
         icon:<Face6Icon />
       },
       {
         title: 'Financials',
-        path:'/financial',
+        path:'/dashboard/finance',
         icon:<AttachMoneyIcon />
       },
       {
         title: 'Maintainance & Repair',
-        path:'/maintainance-and-repair',
+        path:'/dashboard/maintainance',
         icon: <BuildIcon />
       },
       {
         title: 'Reports',
-        path:'/reports',
+        path:'/dashboard/reports',
         icon: <SummarizeIcon />
       },
     ],
@@ -101,7 +101,7 @@ const getSections = (): Section[] => [
     items:[
       {
         title: 'customer Support',
-        path:'/customer-support',
+        path:'/dashboard/support',
         icon:<HelpIcon />
       },
     ]
