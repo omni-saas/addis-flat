@@ -25,6 +25,7 @@ interface DashboardNavbarProps extends AppBarProps {
 
 const DashboardNavbarRoot = styled(AppBar)(
   ({ theme }) => ({
+    
     backgroundColor: theme.palette.background.paper,
     ...(
       theme.palette.mode === 'light'
@@ -100,6 +101,7 @@ export const DashboardNavbar: FC<DashboardNavbarProps> = (props) => {
           left: {
             lg: 280
           },
+          backdropFilter:"blur(20px)",
           width: {
             lg: 'calc(100% - 280px)'
           }
