@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  # addis_flat_backend:
+  #   build: 
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   container_name: addis-flat-backend-service
+  #   env_file: .env
+  #   ports:
+  #     - '$PORT:$PORT'
+  #   depends_on:
+  #     - postgres
+  postgres:
+    container_name: addis-flat-postgres
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=addis-flat-data
+
+volumes:
+  db_data: ~
