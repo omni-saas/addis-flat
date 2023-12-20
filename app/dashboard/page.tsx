@@ -8,6 +8,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import ItemToComplete from "@/components/dashboard-overview/items-to-complete";
 import UnreadMessage from "@/components/dashboard-overview/unread-message";
 import MaintainanceRequest from "@/components/dashboard-overview/maintenance-request";
+import AnalyticsCard from "@/components/dashboard-overview/analytics-card";
 
 export default function Dashboard() {
   return (
@@ -71,6 +72,7 @@ export default function Dashboard() {
                 xs={12}
               >
                 <ItemToComplete />
+                <AnalyticsCard />
               </Grid>
               <Grid
                 item
@@ -82,13 +84,13 @@ export default function Dashboard() {
               </Grid>
         </Grid>
         <Grid container spacing={4}>
-              <Grid
-                item
-                md={8}
-                xs={12}
-              >
-
-              </Grid>
+          <Grid
+            item
+            md={8}
+            xs={12}
+          >
+            
+          </Grid>
         </Grid>
       </Container>
     </Box>
