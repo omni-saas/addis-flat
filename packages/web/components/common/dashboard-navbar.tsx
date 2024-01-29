@@ -74,12 +74,12 @@ const AccountButton = () => {
       >
         <Avatar
           sx={{
-            height: 40,
-            width: 40
+            height: 30,
+            width: 30
           }}
           src={user.avatar}
         >
-          <AccountCircleIcon fontSize="medium" />
+          <AccountCircleIcon fontSize="small" />
         </Avatar>
       </Box>
       {/* <AccountPopover
